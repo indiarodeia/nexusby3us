@@ -1,0 +1,12 @@
+/* Custom styles by India */
+
+/* Team member - cargo */
+.cargo-text {
+  font-size: 12px;
+  line-height: 17px;
+  margin-top: 4px;
+}
+
+* {
+  scroll-behavior: smooth !important;
+}
