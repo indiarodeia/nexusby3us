@@ -1,0 +1,36 @@
+/* Custom styles by India */
+
+/* Team member - cargo */
+.cargo-text {
+  font-size: 12px;
+  line-height: 17px;
+  margin-top: 4px;
+}
+
+* {
+  scroll-behavior: smooth !important;
+}
+
+.swiper-slide.incubados {
+  margin: 0 20px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-slide.incubados span {
+  line-height: 103%;
+  font-size: 16px;
+  margin-top: 18px;
+  max-width: 130px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 26px;
+  color: #353535;
+  word-break: keep-all;
+}
+
+.swiper-slide.incubados img {
+  max-width: 200px;
+  max-height: 100px;
+}
