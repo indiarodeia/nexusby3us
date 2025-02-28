@@ -2,35 +2,46 @@
 
 /* Team member - cargo */
 .cargo-text {
-  font-size: 12px;
-  line-height: 17px;
-  margin-top: 4px;
+    font-size: 12px;
+    line-height: 17px;
+    margin-top: 4px;
 }
 
 * {
-  scroll-behavior: smooth !important;
+    scroll-behavior: smooth !important;
 }
 
 .swiper-slide.incubados {
-  margin: 0 20px !important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    margin: 0 20px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .swiper-slide.incubados span {
-  line-height: 103%;
-  font-size: 16px;
-  margin-top: 18px;
-  max-width: 130px;
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 26px;
-  color: #353535;
-  word-break: keep-all;
+    line-height: 103%;
+    font-size: 16px;
+    margin-top: 18px;
+    max-width: 130px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 26px;
+    color: #353535;
+    word-break: keep-all;
 }
 
 .swiper-slide.incubados img {
-  max-width: 200px;
-  max-height: 100px;
+    max-width: 200px;
+    max-height: 100px;
+}
+
+/* Slide box - rede incubadoras */
+.sliding-box-style-02 .sliding-box-item .sliding-box-img {
+    border-radius: 14px;
+}
+.sliding-box-style-02 .sliding-box-item.active .sliding-box-img {
+    border-radius: 14px 0 0 14px;
+}
+.border {
+    border: 1px solid #742c2c;
 }
