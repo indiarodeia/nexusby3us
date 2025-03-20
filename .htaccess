@@ -1,13 +1,14 @@
 RewriteEngine On
 
-# Redirect from /index.html to root URL
-RewriteCond %{HTTPS} on
-RewriteRule ^index\.html$ https://nexusby3us.com// [L,R=301]
+# Redirect /index.html to root URL
+RewriteCond %{THE_REQUEST} /index\.html [NC]
+RewriteRule ^index\.html$ / [R=301,L]
 
-# Remove .html extension
+# Redirect .html URLs to clean URLs (e.g., /clients.html → /clients)
+RewriteCond %{REQUEST_URI} ^/(.*)\.html$ [NC]
+RewriteRule ^(.*)\.html$ /$1 [R=301,L]
+
+# Internally serve .html files when requested without extension (e.g., /clients → /clients.html)
+RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule !.*\.html$ %{REQUEST_FILENAME}.html [L]
-
-# Redirect from .html URLs to plain
-RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?/] [NC]
-RewriteRule ^ /%1 [R=302,L,NE]
+RewriteRule ^(.*)$ $1.html [L]
