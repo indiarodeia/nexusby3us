@@ -48,3 +48,54 @@
 .border {
     border: 1px solid #742c2c;
 }
+
+/* Links para projetos - clients.html */
+
+/* Alinhar lista de projetos à direita */
+.nexus-approved-projects-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Mantém ícone + texto alinhados entre si */
+.nexus-approved-projects-list li {
+    justify-content: center;
+    width: auto;
+}
+/* Hover dos links dos projetos aprovados */
+.nexus-approved-projects-list li a {
+    position: relative;
+    transition: color 0.25s ease;
+}
+
+.nexus-approved-projects-list li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--base-color);
+    transition: width 0.25s ease;
+}
+
+.nexus-approved-projects-list li:hover a {
+    color: var(--base-color);
+}
+
+.nexus-approved-projects-list li:hover a::after {
+    width: 100%;
+}
+
+/* Espaçamento correto entre ícone e texto */
+.nexus-approved-projects-list li i {
+    margin-right: 10px;
+}
+.nexus-approved-projects-list li a:focus-visible {
+    outline: none;
+}
+
+.nexus-approved-projects-list li a:focus-visible::after {
+    width: 100%;
+}
